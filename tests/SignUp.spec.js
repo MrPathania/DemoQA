@@ -18,30 +18,28 @@ test('TextBox', async({page, browser})=>{
 await page.getByText('Text Box').click();
 const currentUrl= page.url()
 expect(currentUrl).toBe('https://demoqa.com/text-box');
-await page.getByPlaceholder('Full Name').fill('Ayush');
-await page.getByPlaceholder('name@example.com').fill('Ayush@test.com');
-await page.getByPlaceholder('Current Address').fill('Delhi');
+await page.getByPlaceholder('Full Name').fill(data.textBox.fullName);
+await page.getByPlaceholder('name@example.com').fill(data.textBox.email);
+await page.getByPlaceholder('Current Address').fill(data.textBox.address);
 await page.getByRole('button', {name:'Submit'}).click();
 await page.waitForTimeout(5000)
 
 })
 
 test('Radio Button',async ({page})=>{
-    const yes = 'Yes'
-    const Impressive = 'Impressive'
 
 await page.getByText('Radio Button').click()
-await page.getByText(yes).click();
+await page.getByText(data.radioButton.yes).click();
 const yesConfirmation = await page.locator('.text-success').textContent() 
-expect(yesConfirmation).toBe(yes);
-await page.getByText(Impressive).click();
+expect(yesConfirmation).toBe(data.radioButton.yes);
+await page.getByText(data.radioButton.Impressive).click();
 const ImpressiveConfirmation = await page.locator('.text-success').textContent() 
-expect(ImpressiveConfirmation).toBe(Impressive);
+expect(ImpressiveConfirmation).toBe(data.radioButton.Impressive);
 
 })
 
 
-test.only('Web Tables',async ({page})=>{
+test('Web Tables',async ({page})=>{
 
 await page.getByText('Web Tables').click()
 await page.pause()

@@ -3,8 +3,17 @@
         "firstName": "Ayush",
         "lastName": "Pathania",
         "age": "18",
-        "email": "test@tes.com",
+        "email": "test@test.com",
         "salary": "500000",
         "department": "QA Automation Engineer"
+    },
+    "radioButton": {
+        "yes" : "Yes",
+        "Impressive" : "Impressive"
+    },
+    "textBox":{
+        "fullName":"Ayush Pathania",
+        "email": "test@test.com",
+        "address":"Delhi"
     }
 }

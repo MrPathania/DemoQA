@@ -22,7 +22,7 @@ expect:{
    headless: false,
    browserName: 'chromium',
     trace: 'on-first-retry',
-    baseURL:'https://demoqa.com/',
+    baseURL:'https://demoqa.com',
   },
 
  
