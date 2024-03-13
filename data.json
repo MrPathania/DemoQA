@@ -1,0 +1,10 @@
+{
+    "webTable": {
+        "firstName": "Ayush",
+        "lastName": "Pathania",
+        "age": "18",
+        "email": "test@tes.com",
+        "salary": "500000",
+        "department": "QA Automation Engineer"
+    }
+}
