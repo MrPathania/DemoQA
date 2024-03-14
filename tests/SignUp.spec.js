@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const config = require('../playwright.config')
+const config = require('../playwright.config');
 const data = JSON.parse(JSON.stringify(require('../data.json')));
 
 test.beforeEach( 'test', async({page, browser})=>{
@@ -50,6 +50,21 @@ await page.getByPlaceholder('name@example.com').fill(data.webTable.email);
 await page.getByPlaceholder('Age').fill(data.webTable.age);
 await page.getByPlaceholder('Salary').fill(data.webTable.salary);
 await page.getByPlaceholder('Department').fill(data.webTable.department);
+await page.click('#submit');
 
+})
 
+test('Buttons',async({page})=>{
+
+ await page.getByText('Buttons').click();
+await page.locator('#doubleClickBtn').dblclick();
+const loc =await page.locator('#doubleClickMessage').textContent();
+expect(loc).toBe('You have done a double click');
+console.log('Double click is done');
+await page.locator('#rightClickBtn').click({button:"right"});
+expect(await page.locator('#rightClickMessage').textContent()).toBe('You have done a right click');
+console.log('Right click is done');
+await page.getByText('Click Me', {exact:true}).click({button:"left"})
+expect(await page.locator('#dynamicClickMessage').textContent()).toBe('You have done a dynamic click');
+console.log('click is done');
 })
