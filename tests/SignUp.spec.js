@@ -1,6 +1,5 @@
 const { test, expect } = require('@playwright/test');
 const config = require('../playwright.config');
-const exp = require('constants');
 const data = JSON.parse(JSON.stringify(require('../data.json')));
 
 test.beforeEach( 'test', async({page, browser})=>{
