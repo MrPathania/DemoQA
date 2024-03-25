@@ -6,7 +6,8 @@
   "scripts": {
       "forms":"npx playwright test tests/forms.spec.js",
       "signup":"npx playwright test tests/SignUp.spec.js",
-      "alerts":"npx playwright test tests/alerts.spec.js"
+      "alerts":"npx playwright test tests/alerts.spec.js",
+      "window":"npx playwright test tests/browserWindow.spec.js"
   },
   "keywords": [],
   "author": "",
