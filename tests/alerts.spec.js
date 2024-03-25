@@ -36,3 +36,15 @@ test.skip('Confirm alert box', async ({ page }) => {
     expect(await page.locator('#confirmResult').textContent()).toContain('You selected Cancel');
 });
 
+test('prompt button', async({page})=>{
+    const msg = 'Ayush Pathania'
+    page.on('dialog', dialog=>{
+    
+        dialog.accept(msg)
+    })
+    await page.click('#promtButton')
+    expect(await page.locator('#promptResult').textContent()).toContain(msg)
+    
+    
+    })
+    
