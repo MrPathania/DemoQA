@@ -68,3 +68,10 @@ await page.getByText('Click Me', {exact:true}).click({button:"left"})
 expect(await page.locator('#dynamicClickMessage').textContent()).toBe('You have done a dynamic click');
 console.log('click is done');
 })
+
+test.only ('Upload and Download', async({page})=>{
+
+    await page.getByText('Upload and Download').click();
+    await page.locator('#uploadFile').setInputFiles('E:\Ayush\DemoQA\sampleFile.jpg');
+    await page.waitForTimeout(10000)
+})
