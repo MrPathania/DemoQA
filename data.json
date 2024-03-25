@@ -15,5 +15,14 @@
         "fullName":"Ayush Pathania",
         "email": "test@test.com",
         "address":"Delhi"
+    },
+    "forms":{
+        "firstName": "Ayush",
+        "lastName": "Pathania",
+        "email": "test@test.com",
+        "mobile": "1234567890",
+        "subjects": "English, Hindi, SST",
+        "address":"Delhi"
+
     }
 }

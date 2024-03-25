@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+      "forms":"npx playwright test tests/forms.spec.js",
+      "signup":"npx playwright test tests/SignUp.spec.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
