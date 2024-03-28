@@ -25,4 +25,5 @@ test('Switch to new tab', async ({ page }) => {
     await page1.getByText('Frames', {exact:true}).click();
     await page.waitForTimeout(5000);
     
+    
 });
